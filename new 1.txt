@@ -1,0 +1,7 @@
+What do I want to do in my project?
+
+-Compare times easily with other people
+	-Take a file
+	-Be able to see places for improvement (which split has biggest difference)
+		-See n largest time saves (can use proof for this)
+	-Places where im far ahead (same as above)
