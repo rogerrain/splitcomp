@@ -1,2 +1,2 @@
-# timecomp
-Python-based Time Comparison Program
+# splitscomp
+A Python-based Time Comparison Program
