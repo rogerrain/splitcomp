@@ -1,15 +1,5 @@
 from contracts import contract
 
-"""
-def getTime():
-    time = input("Please enter a time in the format 'hh:mm:ss.mis': ")
-    mss = time.split(".")
-    ss = mss[0].split(":")
-    if len(mss) > 1:
-        ss.append(mss[1])
-    return ss
-"""
-
 @contract(s = "str", returns = "list[4]")
 def sToTime(s):
     """Takes a time string hh:mm:ss.mis and returns a corresponding list
@@ -81,23 +71,10 @@ def fromTD(s):
         elif s[1] != "0":
             return temp * 10
 
-"""
-def main():
-    timeList = getTime()
-    for time in timeList:
-        print(time)
-    ms = toMS(timeList)
-    print(ms)
-    timeList2 = getTime()
-    for time in timeList2:
-        print(time)
-    ms2 = toMS(timeList2)
-    print(ms2)
-    total = abs(ms - ms2)
-    print(total)
-    time = fromMS(total)
-    print(time)
-
-if __name__ == "__main__":
-    main()
-"""
+@contract(s = "str[n], n > 0", returns = "int, <100")
+def fromDD(s):
+    """Takes a string of 2 digits and returns a number with up to 2 digits"""
+    if len(s) <= 2:
+        return int(s)
+    else:
+        return int(s[0:2])
